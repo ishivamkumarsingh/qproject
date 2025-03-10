@@ -1,10 +1,7 @@
 package stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import com.aventstack.extentreports.ExtentTest;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -15,22 +12,21 @@ import pageobjects.HomePage;
 import utility.*;
 
 public class PurchaseSteps {
-    WebDriver driver;
     HomePage homePage;
     ComputersPage computersPage;
     DesktopsPage desktopsPage;
     CartPage cartPage;
     ExtentTest test;
+    WebDriver driver;
 
     @Given("User is on Demo Web Shop homepage")
     public void user_is_on_demo_web_shop_homepage() {
+        driver = Hooks.driver;
+        driver.get("https://demowebshop.tricentis.com/");
+        
         test = ExtentReportManager.createTest("Purchase Test");
         test.info("User is navigating to Demo Web Shop homepage");
         LoggerUtil.info("Navigating to Demo Web Shop homepage");
-        
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://demowebshop.tricentis.com/");
         
         // Initialize Page Objects
         homePage = new HomePage(driver);
@@ -81,7 +77,5 @@ public class PurchaseSteps {
     public void order_summary_should_be_displayed() {
         LoggerUtil.info("Verifying Order Summary");
         test.pass("Order Summary is displayed");
-        ExtentReportManager.flushReport();
-        driver.quit();
     }
 }

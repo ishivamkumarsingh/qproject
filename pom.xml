@@ -58,7 +58,24 @@
     <artifactId>commons-io</artifactId>
     <version>2.15.1</version>
 </dependency>
+<dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>5.2.3</version>
+    </dependency>
 
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>5.2.3</version>
+    </dependency>
+
+    <!-- XMLBeans (Required for POI) -->
+    <dependency>
+        <groupId>org.apache.xmlbeans</groupId>
+        <artifactId>xmlbeans</artifactId>
+        <version>5.1.1</version>
+    </dependency>
     </dependencies>
 
     <build>

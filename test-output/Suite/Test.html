@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 10 10:50:01 IST 2025</td>
+<td>Started on:</td><td>Mon Mar 10 11:14:10 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (999 ms)</td>
+<tr><td>Total time:</td><td>50 seconds (50745 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,88 +68,80 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testrunners.TestRunner.setUpClass()'><b>setUpClass</b><br>Test class: testrunners.TestRunner<br>Parameters: org.testng.TestRunner@327af41b</td>
-<td><div><pre>io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///E:/kuch/Q_demo_project/src/test/java/features/purchase.feature
-(1:1): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;Scenario: Purchase a Desktop from Demo Web Shop&apos;
-(2:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;Given User is on Demo Web Shop homepage&apos;
-(3:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;When User clicks on Computers link&apos;
-(4:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;And User selects Desktops&apos;
-(5:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;And User selects the first desktop&apos;
-(6:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;And User adds the desktop to the cart&apos;
-(7:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;And User navigates to cart and proceeds to checkout&apos;
-(8:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;Then Order summary should be displayed&apos;
-	at io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:56)
-	at io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:46)
-	at java.base/java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
-	at io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
-	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:75)
-	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:60)
-	at java.base/java.nio.file.Files.walkFileTree(Files.java:2786)
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:53)
-	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
-	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
-	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:122)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace110053477", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace110053477'><pre>io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///E:/kuch/Q_demo_project/src/test/java/features/purchase.feature
-(1:1): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;Scenario: Purchase a Desktop from Demo Web Shop&apos;
-(2:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;Given User is on Demo Web Shop homepage&apos;
-(3:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;When User clicks on Computers link&apos;
-(4:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;And User selects Desktops&apos;
-(5:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;And User selects the first desktop&apos;
-(6:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;And User adds the desktop to the cart&apos;
-(7:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;And User navigates to cart and proceeds to checkout&apos;
-(8:5): expected: #EOF, #Language, #TagLine, #FeatureLine, #Comment, #Empty, got &apos;Then Order summary should be displayed&apos;
-	at io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:56)
-	at io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:46)
-	at java.base/java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
-	at io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
-	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:75)
-	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:60)
-	at java.base/java.nio.file.Files.walkFileTree(Files.java:2786)
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:53)
-	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
-	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
-	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:122)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Purchase a Desktop from Demo Web Shop", "Purchase process on Demo Web Shop"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&apos;checkout&apos;]&quot;}
+  (Session info: chrome=133.0.6943.143)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [451fe77f08ea54cd9b81d15eade090c1, findElement {value=//button[@id=&apos;checkout&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.143, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50588}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50588/devtoo..., se:cdpVersion: 133.0.6943.143, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 451fe77f08ea54cd9b81d15eade090c1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pageobjects.CartPage.proceedToCheckout(CartPage.java:27)
+	at stepdefinitions.PurchaseSteps.user_navigates_to_cart_and_proceeds_to_checkout(PurchaseSteps.java:72)
+	at ✽.User navigates to cart and proceeds to checkout(file:///E:/kuch/Q_demo_project/src/test/java/features/purchase.feature:9)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace388005723", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace388005723'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&apos;checkout&apos;]&quot;}
+  (Session info: chrome=133.0.6943.143)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [451fe77f08ea54cd9b81d15eade090c1, findElement {value=//button[@id=&apos;checkout&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.143, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50588}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50588/devtoo..., se:cdpVersion: 133.0.6943.143, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 451fe77f08ea54cd9b81d15eade090c1
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pageobjects.CartPage.proceedToCheckout(CartPage.java:27)
+	at stepdefinitions.PurchaseSteps.user_navigates_to_cart_and_proceeds_to_checkout(PurchaseSteps.java:72)
+	at ✽.User navigates to cart and proceeds to checkout(file:///E:/kuch/Q_demo_project/src/test/java/features/purchase.feature:9)
 </pre></div></td>
-<td>0</td>
-<td>testrunners.TestRunner@1ffe63b9</td></tr>
+<td>22</td>
+<td>testrunners.TestRunner@647fd8ce</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testrunners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Registering a new user", "User Registration on Demo Web Shop"</td>
+<td></td>
+<td>27</td>
+<td>testrunners.TestRunner@647fd8ce</td></tr>
 </table><p>
 </body>
 </html>

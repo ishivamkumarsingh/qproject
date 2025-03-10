@@ -1,3 +1,5 @@
+Feature: Purchase process on Demo Web Shop
+
 Scenario: Purchase a Desktop from Demo Web Shop
     Given User is on Demo Web Shop homepage
     When User clicks on Computers link
