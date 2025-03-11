@@ -18,14 +18,14 @@ public class Hooks {
     public void setup(Scenario scenario) {
         LoggerUtil.info("Starting scenario: " + scenario.getName());
         
-        // Create directories if they don't exist
+        
         new File("screenshots").mkdirs();
         new File("reports").mkdirs();
         
-        // Initialize ExtentReport
+        
         ExtentReportManager.setupReport();
         
-        // Setup WebDriver
+        
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }

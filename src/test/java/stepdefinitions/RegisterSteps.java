@@ -12,7 +12,7 @@ public class RegisterSteps {
     WebDriver driver;
     RegisterPage registerPage;
     ExtentTest test;
-
+    
     @Given("User is on Demo Web Shop registration page")
     public void user_is_on_demo_web_shop_registration_page() {
         driver = Hooks.driver;
@@ -30,7 +30,7 @@ public class RegisterSteps {
     public void user_enters_valid_details() {
         LoggerUtil.info("Entering user details");
         test.info("User entered registration details");
-        registerPage.enterUserDetails("John", "Doe", "johndoe" + System.currentTimeMillis() + "@example.com", "password123");
+        registerPage.enterUserDetails("shivam", "singh", "shivamsingh"+"@example.com", "qwerty");
         ScreenshotUtil.captureScreenshot(driver, "RegisterForm");
     }
 

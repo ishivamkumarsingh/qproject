@@ -28,7 +28,6 @@ public class PurchaseSteps {
         test.info("User is navigating to Demo Web Shop homepage");
         LoggerUtil.info("Navigating to Demo Web Shop homepage");
         
-        // Initialize Page Objects
         homePage = new HomePage(driver);
         computersPage = new ComputersPage(driver);
         desktopsPage = new DesktopsPage(driver);
@@ -49,10 +48,10 @@ public class PurchaseSteps {
         computersPage.clickOnDesktops();
     }
 
-    @When("User selects the first desktop")
-    public void user_selects_the_first_desktop() {
-        LoggerUtil.info("Selecting the first desktop");
-        test.info("User selected the first desktop");
+    @When("User clicks on the first desktop")
+    public void user_clicks_on_the_first_desktop() {
+        LoggerUtil.info("Clicking on the first desktop");
+        test.info("User clicked on the first desktop");
         desktopsPage.selectFirstDesktop();
     }
 
@@ -64,18 +63,40 @@ public class PurchaseSteps {
         ScreenshotUtil.captureScreenshot(driver, "AddedToCart");
     }
 
-    @When("User navigates to cart and proceeds to checkout")
-    public void user_navigates_to_cart_and_proceeds_to_checkout() {
-        LoggerUtil.info("Navigating to cart and proceeding to checkout");
-        test.info("User navigated to cart and proceeded to checkout");
+    @When("User opens the cart")
+    public void user_opens_the_cart() {
+        LoggerUtil.info("Opening the cart");
+        test.info("User opened the cart");
         cartPage.openCart();
+    }
+
+    @When("User selects I agree with the terms of service and I adhere to them unconditionally")
+    public void user_selects_terms_and_conditions() {
+        LoggerUtil.info("Selecting terms of service checkbox");
+        test.info("User agreed with the terms of service");
+        cartPage.acceptTermsAndConditions();
+    }
+
+    @When("User clicks on checkout button")
+    public void user_clicks_on_checkout_button() {
+        LoggerUtil.info("Clicking on checkout button");
+        test.info("User clicked on checkout button");
         cartPage.proceedToCheckout();
         ScreenshotUtil.captureScreenshot(driver, "CheckoutPage");
     }
 
-    @Then("Order summary should be displayed")
-    public void order_summary_should_be_displayed() {
-        LoggerUtil.info("Verifying Order Summary");
-        test.pass("Order Summary is displayed");
+    @Then("User should be on the checkout page")
+    public void user_should_be_on_checkout_page() {
+        String expectedTitle = "Checkout";
+        String actualTitle = driver.getTitle();
+
+        if (actualTitle.contains(expectedTitle)) {
+            LoggerUtil.info("Checkout page title is correct: " + actualTitle);
+            test.pass("Test passed: User is on the correct checkout page");
+        } else {
+            LoggerUtil.error("Checkout page title is incorrect. Expected: " + expectedTitle + ", but found: " + actualTitle);
+            test.fail("Test failed: User is not on the correct checkout page");
+            ScreenshotUtil.captureScreenshot(driver, "CheckoutPage_Error");
+        }
     }
 }
